@@ -87,15 +87,23 @@
 // }
 // verificar();
 
-function tranf(){
-    var pal = "PYtohn";
-    var separe = pal.slice(0,2);
+// function tranf(){
+//     var pal = "PYtohn";
+//     var separe = pal.slice(0,2);
 
-    if(separe == "py" || separe == "Py" || separe == "PY"){
-        console.log(pal);
-    } else {
-        console.log("py" + pal);
-    }
-}
+//     if(separe == "py" || separe == "Py" || separe == "PY"){
+//         console.log(pal);
+//     } else {
+//         console.log("py" + pal);
+//     }
+// }
 
-tranf()
+// tranf()
+
+var pal = "palavra";
+var newpal = pal.split("");
+var final = newpal.reverse();
+var final2 = final.join("")
+
+console.log(final2);
+

@@ -25,6 +25,16 @@
             var pal = ipal.value;
             var retorno = document.getElementById('retorno');
 
+            if (pal.length<1){
+                retorno.innerHTML = 'Insira uma palavra válida.'
+            } else {
+                var newpal = pal.split("");
+                var final = newpal.reverse();
+                var final2 = final.join("");
+
+                retorno.innerHTML = final2;
+            }
+
             
         }
     </script>
