@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Número da sorte</h1>
+    <p>Digite um número entre 0 e 10.</p>
+    <p>
+        <label for="inum">Seu número: </label>
+        <input type="number" name="num" id="inum">
+    </p>
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <script>
+        //window.alert('funciona');
+        function conferir(){
+            var num = document.getElementById('inum');
+            var numConv = Number(num.value);
+
+            var meuNum = Math.floor(Math.random()*10 +1);
+
+            if(numConv<0 || numConv>10){
+                window.alert("Insira um número entre 0 e 10.")
+            } else {
+                if (meuNum == numConv){
+                    window.alert("Bom trabalho");
+                } else {
+                    window.alert("Número não correspondido, nosso número é " + meuNum);
+                }
+            }            
+        }
+    </script>
+    
+</body>
+</html>

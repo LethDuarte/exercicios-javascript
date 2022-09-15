@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Vamos calcular</h1>
+    <p>
+        <label for="inum1">Primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+    <p>
+        <label for="inum2">Segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Multiplicar" onclick="multiplicar()">
+        <input type="button" value="Dividir" onclick="dividir()">
+    </p>
+
+    <p id='resultado'>
+        O resultado é: 
+    </p>
+    
+    <script>
+        //window.alert('funciona');
+        var inum1 = document.getElementById('inum1');
+        var num1 = Number(inum1.value);
+        var inum2 = document.getElementById('inum2');
+        var num2 = Number(inum2.value);
+        var resultado = document.getElementById('resultado');
+
+        function multiplicar(){
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var multi = num1 * num2;
+            resultado.innerText += ' ' + multi;
+        }
+
+        function dividir(){
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var divi = num1/num2;
+            resultado.innerText += ' ' + divi;
+        }
+
+
+    </script>
+</body>
+</html>

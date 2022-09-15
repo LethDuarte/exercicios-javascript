@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Removendo caracteres</h1>
+    <p>Insira uma palavra e indique a posição que deseja remover a letra (inicie a contagem em 0).</p>
+    <p>
+        <label for="ipal">Insira a palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <label for="inum">Insira a posição: </label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Remover" onclick="remover()">
+    </p>
+
+    <p id="retorno">
+        Seu retorno aqui.
+    </p>
+
+    <script>
+        function remover(){
+            var ipal = document.getElementById('ipal');
+            var pal = ipal.value;
+            var inum = document.getElementById('inum');
+            var num = Number(inum.value);
+            var retorno = document.getElementById('retorno');
+            var newpal;
+
+            if(num<0 || num>pal.length){
+                window.alert('Insira um valor válido.')
+            } else{
+                newpal = pal.slice(0, num - 1) + pal.slice(num, pal.length);
+                retorno.innerHTML = newpal;
+
+            }
+        }
+    </script>
+    
+</body>
+</html>

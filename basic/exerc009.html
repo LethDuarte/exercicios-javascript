@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body onload="natal()">
+    <h1>Quantos dias faltam para o Natal?</h1>
+    <p style="display: inline;">O Natal será em 
+        <div id="inatal" style="display: inline;">
+
+        </div> dias.
+    </p>
+
+    <script>
+        function natal(){
+            //window.alert('feliz natal');
+            var inatal = document.getElementById('inatal');
+            var hoje = new Date();
+            var anoAtual = hoje.getFullYear();
+            var dataLimite = new Date(anoAtual, 11, 25);
+            const umDia = 1000 * 60 *60 *24;
+
+            if (hoje < dataLimite){
+                var faltam = (dataLimite - hoje)/umDia;
+                inatal.innerText = faltam.toFixed(0);
+            } else {
+                dataLimite = new Date(anoAtual+1, 11, 25);
+                var faltam = (dataLimite - hoje)/umDia;
+                inatal.innerText = faltam.toFixed(0);
+            }
+        }
+    </script>
+    
+</body>
+</html>

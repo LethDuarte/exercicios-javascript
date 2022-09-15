@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+
+    <p>
+        <label for="inum1">Número 1: </label>
+        <input type="number" name="num1" id="inum1">
+        <label for="inum2">Número 2:</label>
+        <input type="number" name="num2" id="inum2">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <p id="resultado">
+        Seu resultado aqui.
+    </p>
+
+    <script>
+        //copiado da resolução
+        function verificar(){
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var resultado = document.getElementById('resultado');
+
+            if((num1<0 && num2>=0) || num1>=0 && num2<0){
+                resultado.innerHTML = `Verdadeiro`;
+            } else {
+                resultado.innerHTML = `Falso`;
+            }            
+        }
+    </script>
+    
+</body>
+</html>

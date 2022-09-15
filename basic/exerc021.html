@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Língua do Py</h1>
+    <p>Insira uma palavra e veja como ela fica na lingua do 'Py'.</p>
+
+    <p>
+        <label for="ipal">Insira a palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Py" onclick="tranf()">
+    </p>
+
+    <p id="retorno">
+        Seu retorno aqui.
+    </p>
+
+    <script>
+        function tranf(){
+            var ipal = document.getElementById('ipal');
+            var pal = ipal.value;
+            var retorno = document.getElementById('retorno');
+            var separe = pal.slice(0,2);
+
+            if(separe == "py" || separe == "Py" || separe == "PY"){
+                retorno.innerHTML = pal;
+            } else {
+                retorno.innerHTML = "Py" + pal;
+            }
+        }
+    </script>
+    
+</body>
+</html>

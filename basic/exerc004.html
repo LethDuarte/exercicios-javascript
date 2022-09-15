@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JavaScript</title>
+</head>
+<body>
+    <h1>Calcular a área do triângulo</h1>
+    <p>Insira as medidas dos lados e calcule a área do triângulo:</p>
+    <label for="ilado1">Lado 1:</label>
+    <input type="number" name="lado1" id="ilado1">
+
+    <label for="ilado1">Lado 2:</label>
+    <input type="number" name="lado2" id="ilado2">
+    
+    <label for="ilado1">Lado 3:</label>
+    <input type="number" name="lado3" id="ilado3">
+
+    <input type="button" value="Calcular Área" onclick="area()"> <br>
+
+    <label for="area">Área: </label>
+    <output id="area"></output>
+
+    <script>
+        //window.alert("teste");
+        function area(){
+            var lado1 = window.document.getElementById("ilado1");
+            var lado2 = window.document.getElementById('ilado2');
+            var lado3 = window.document.getElementById('ilado3');
+            var res = window.document.getElementById("area");
+
+            var a = Number(lado1.value);
+            var b = Number(lado2.value);
+            var c = Number(lado3.value);
+
+            var p = (a + b + c)/2;
+            var area = Math.sqrt(p*(p - a) * (p-b) * (p-c));
+
+            res.innerText = `A área deste triângulo é igual a ${area}.`;
+
+        }
+
+    </script>
+</body>
+</html>

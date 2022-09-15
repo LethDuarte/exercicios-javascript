@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Números Mágicos</h1>
+    <p>Insira dois números e valide o resultado.    </p>
+
+    <p>
+        <label for="inum1">Digite o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+
+    <p>
+        <label for="inum2">Digite o segundo número: </label>
+        <input type="number" name="num1" id="inum2">
+    </p>
+    
+    <p>
+        <input type="button" value="Validar" onclick="somar()">
+    </p>
+
+    <div id="resposta">
+
+    </div>
+
+    <script>
+        function somar(){
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var resposta = document.getElementById('resposta');
+            var soma;
+
+            if(num1 != num2){
+                soma = num1 + num2;
+                resposta.innerHTML = `A soma de ${num1} e ${num2} é igual a ${soma}.`
+            } else {
+                soma = (num1 +num2)*3;
+                resposta.innerHTML = `O triplo da soma de ${num1} e ${num2} é igual a ${soma}.`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Seu número e 13</h1>
+
+    <p>
+        <label for="inum">Digite um número</label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Validar" onclick="validar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+    
+    <script>
+        function validar(){
+            var inum = document.getElementById('inum');
+            var num = Number(inum.value);
+            var retorno = document.getElementById('retorno');
+
+            if(num <= 13){
+                var dif = 13 - num;
+                retorno.innerHTML = `A diferença entre 13 e ${num} é igual a ${dif}.`               
+            } else {
+                var dobro = (num - 13) *2;
+                retorno.innerHTML = `O dobro da diferença entre ${num} e 13 é igual a ${dobro}.`
+            }
+        }
+
+    </script>
+</body>
+</html>

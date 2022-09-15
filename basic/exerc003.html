@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript - Básico</title>
+</head>
+<body>
+    <h1>Data atual:</h1>
+    <button onclick="data()">Clique aqui</button>
+    <div id="data"> </div>
+    
+    <script>
+        function data(){ 
+            var data = window.document.getElementById("data");
+            var dia = new Date().toLocaleDateString();
+            data.innerText = dia;
+        }
+
+    </script>
+</body>
+</html>

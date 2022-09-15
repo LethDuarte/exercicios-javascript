@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JavaScript</title>
+</head>
+<body>
+    <h1>Esse ano é bissexto?</h1>
+    <p>Para que um ano seja bissexto, ele precisa ser divisível por 4 ao mesmo tempo que não é divisívell por 100. Vamos conferir se seu número se encaixa nessas condições?</p>
+
+    <p>
+        <label for="iano">Insira um ano:</label>
+        <input type="number" name="ano" id="iano">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="
+        conferir()">
+    </p>
+
+    <div id="resposta">
+
+    </div>
+    
+    <script>
+        function conferir(){
+            var ano = document.getElementById('iano');
+            var anoConv = Number(ano.value);
+            var resposta = document.getElementById  ('resposta');
+
+            if(anoConv%4 == 0 && anoConv%100 != 0){
+                resposta.innerText = "O ano inserido é bissexto!";
+            } else {
+                resposta.innerText = "O ano inserido não é bissexto.";
+            }
+        }
+
+    </script>
+</body>
+</html>
