@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Múltiplos de 3 ou 7</h1>
+    <p>Descubra se determinado número é múltiplo de 3 ou de 7!</p>
+
+    <p>
+        <label for="inum">Insira um número: </label>
+        <input type="number" name="num" id="inum">
+        <input type="button" value="Descobrir múltiplo" onclick="mult()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        function mult(){
+            var inum = document.getElementById('inum');
+            var num = Number(inum.value);
+            var retorno = document.getElementById('retorno');
+
+            if(num%3 == 0 && num%7 == 0){
+                retorno.innerHTML = `O número ${num} é múltiplo de 3 e de 7!`
+            } else if(num%3 == 0){
+                retorno.innerHTML = `O número ${num} é múltiplo de 3!`
+            } else if(num%7 == 0){
+                retorno.innerHTML = `O número ${num} é múltiplo de 7!`
+            } else {
+                retorno.innerHTML = `O número ${num} não é múltiplo de 3 nem de 7!`
+            }
+        }
+    </script>
+    
+</body>
+</html>

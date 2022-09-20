@@ -101,9 +101,9 @@
 // tranf()
 
 var pal = "palavra";
-var newpal = pal.split("");
-var final = newpal.reverse();
-var final2 = final.join("")
+var prim = pal.substring(0, 1);
+var ult = pal.substring(length(pal) - 1, 1);
+var final = 
 
 console.log(final2);
 

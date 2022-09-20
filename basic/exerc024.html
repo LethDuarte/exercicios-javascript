@@ -7,30 +7,29 @@
     <title>Exercícios JavaScript</title>
 </head>
 <body>
-    <h1>Trocando as letras!</h1>
+    <h1>Criando uma nova palavra</h1>
+    <p>Crie uma nova palavra a partir de uma palavra inserida com o primeiro caractere da palavra adicionada na frente e atrás.</p>
 
     <p>
         <label for="ipal">Insira uma palavra: </label>
         <input type="text" name="pal" id="ipal">
-        <input type="button" value="Trocar" onclick="trocar()">
+        <input type="button" value="Criar" onclick="criar()">
     </p>
 
     <p id="retorno">
-        Seu retorno aqui.
+        
     </p>
 
     <script>
-        function trocar(){
+        function criar(){
             var ipal = document.getElementById('ipal');
             var pal = ipal.value;
             var retorno = document.getElementById('retorno');
-            //solução copiada
-            if (pal.length<=1){
-                retorno.innerHTML = pal;
-            } 
-            var meio = pal.substring(1, pal.length - 1);
-             
-            retorno.innerHTML = (pal.charAt(pal.length - 1)) + meio + pal.charAt(0);            
+
+            var prim = pal.charAt(0);
+            var meio = pal.substring(0);
+
+            retorno.innerHTML = prim + meio + prim;  
         }
     </script>
     
