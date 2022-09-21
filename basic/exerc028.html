@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Confira o intervalo</h1>
+    <p>Insira dois número e confira se eles estão entre 50 e 99!</p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            
+            if(num1>=50 && num1<=99 || num2>=50 && num2<=99){
+                retorno.innerHTML = `Verdadeiro!`;
+            } else {
+            retorno.innerHTML = `Falso!`; 
+            } 
+        }
+    </script>
+    
+</body>
+</html>

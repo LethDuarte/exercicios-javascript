@@ -100,10 +100,17 @@
 
 // tranf()
 
-var pal = "palavra";
-var prim = pal.substring(0, 1);
-var ult = pal.substring(length(pal) - 1, 1);
-var final = 
+var pal = "javascript";
+var prim = pal.substring(pal.length - 6, pal.length); 
 
-console.log(final2);
+console.log(prim);
 
+// function conferir(num1, num2){
+//     if(num1>=50 && num1<=99 || num2>=50 && num2<=99){
+//         return true;
+//     } else {
+//         return false
+//     } 
+// }
+
+// console.log(conferir(65, 45));
