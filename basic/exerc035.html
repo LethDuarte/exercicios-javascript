@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Essa palavra tem a letra A no lugar especial?</h1>
+    <p>Insira uma palavra e confira se ela possue o caractere 'A' no lugar especial.</p>
+
+    <p>
+        <label for="ipal">Insira uma palavra: </label>
+        <input type="text" name="pal" id="ipal">
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var ipal = document.getElementById('ipal');
+            var pal = ipal.value;
+            var palavra = pal.toLowerCase();
+            
+            if(palavra.length < 4){
+                retorno.innerHTML = "Insira outra palavra."
+            } else {
+                if(palavra.charAt(2) == 'a'){
+                retorno.innerHTML = `Parabéns! A palavra ${palavra} possui o caractere A no lugar especial!`;
+                } else {
+                    retorno.innerHTML = `Que pena! A palavra ${palavra} não possui o caractere A no lugar especial.`; 
+                }
+            } 
+        }
+    </script>
+    
+</body>
+</html>

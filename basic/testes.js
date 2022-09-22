@@ -100,10 +100,10 @@
 
 // tranf()
 
-var pal = "javascript";
-var prim = pal.substring(pal.length - 6, pal.length); 
+// var pal = "javascript";
+// var prim = pal.substring(pal.length - 6, pal.length); 
 
-console.log(prim);
+// console.log(prim);
 
 // function conferir(num1, num2){
 //     if(num1>=50 && num1<=99 || num2>=50 && num2<=99){
@@ -114,3 +114,17 @@ console.log(prim);
 // }
 
 // console.log(conferir(65, 45));
+
+function conferir(x, y, z){
+    var pal1 = x.toString();
+    var pal2 = y.toString();
+    var pal3 = z.toString();
+
+    if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) == pal3.slice(pal3.length -1, pal3.length)){
+        return true;
+    } else {
+        return false;
+    } 
+}
+
+console.log(conferir(52, 42, 352));

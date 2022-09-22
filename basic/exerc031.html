@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Qual é o maior?</h1>
+    <p>Insira três números e confira qual deles é o maior!</p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+
+        <label for="inum3">Insira outro número: </label>
+        <input type="number" name="num3" id="inum3">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var inum3 = document.getElementById('inum3');
+            var num3 = Number(inum3.value);
+            
+            
+            if(num1 > num2 && num1 > num3){
+                retorno.innerHTML = `O maior entre os três números é o número ${num1}.`;
+            } else if(num2>num1 && num2>num3){
+                retorno.innerHTML = `O maior entre os três números é o número ${num2}.`
+            } else {
+            retorno.innerHTML = `O maior entre os três números é o número ${num3}.`; 
+            } 
+        }
+    </script>
+    
+</body>
+</html>

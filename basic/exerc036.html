@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Qual é o maior?</h1>
+    <p> Insira dois números entre 40 e 60 e confira qual é o maior. </p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+
+        <label for="inum3">Insira outro número: </label>
+        <input type="number" name="num3" id="inum3">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var inum3 = document.getElementById('inum3');
+            var num3 = Number(inum3.value);
+
+            var pal1 = num1.toString();
+            var pal2 = num2.toString();
+            var pal3 = num3.toString();
+
+            retorno.innerHTML = pal1;
+            
+            if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) == pal3.slice(pal3.length - 1, pal3.length)){
+                retorno.innerHTML = "O último dígito dos três números é o mesmo.";
+            } else {
+            retorno.innerHTML = "O último dígito dos três números são diferentes."; 
+            } 
+        }
+    </script>
+    
+</body>
+</html>

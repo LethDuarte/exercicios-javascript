@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Qual é o maior?</h1>
+    <p> Insira dois números entre 40 e 60 e confira qual é o maior. </p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            
+            if(num1>=40 && num1<=60 && num2>=40 && num2<=60){
+                if(num1 > num2){
+                    retorno.innerHTML = `O número ${num1} é o maior.`;
+                } else {
+                    retorno.innerHTML = `O número ${num2} é o maior.`;
+                }
+            } else {
+            retorno.innerHTML = `Ambos os números devem estar entre 40 e 60.`; 
+            } 
+        }
+    </script>
+    
+</body>
+</html>
