@@ -115,16 +115,31 @@
 
 // console.log(conferir(65, 45));
 
+// function conferir(x, y, z){
+//     var pal1 = x.toString();
+//     var pal2 = y.toString();
+//     var pal3 = z.toString();
+
+//     if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) == pal3.slice(pal3.length-1, pal3.length)){
+//         return true;
+//     } else {
+//         return false;
+//     } 
+// }
+
+// console.log(conferir(52, 42, 352));
+
 function conferir(x, y, z){
     var pal1 = x.toString();
     var pal2 = y.toString();
     var pal3 = z.toString();
-
-    if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) == pal3.slice(pal3.length -1, pal3.length)){
-        return true;
+    
+    
+    if(pal1.slice(pal1.length-1, pal1.length) == pal2.slice(pal2.length-1, pal2.length) &&  pal1.slice(pal1.length-1, pal1.length) == pal3.slice(pal3.length-1, pal3.length))  {
+        return true
     } else {
-        return false;
-    } 
-}
+        return false
+    }
+    }
 
-console.log(conferir(52, 42, 352));
+console.log(conferir(2252, 52, 322))

@@ -7,8 +7,8 @@
     <title>Exercícios JavaScript</title>
 </head>
 <body>
-    <h1>Qual é o maior?</h1>
-    <p> Insira dois números entre 40 e 60 e confira qual é o maior. </p>
+    <h1>O último dígito é igual?</h1>
+    <p> Insira três números e descobriremos se o último dígito de cada um é igual. </p>
 
     <p>
         <label for="inum1">Insira um número: </label>
@@ -46,7 +46,7 @@
 
             retorno.innerHTML = pal1;
             
-            if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) == pal3.slice(pal3.length - 1, pal3.length)){
+            if(pal1.slice(pal1.length - 1, pal1.length) == pal2.slice(pal2.length - 1, pal2.length) && pal1.slice(pal1.length-1, pal1.length) == pal3.slice(pal3.length - 1, pal3.length)){
                 retorno.innerHTML = "O último dígito dos três números é o mesmo.";
             } else {
             retorno.innerHTML = "O último dígito dos três números são diferentes."; 
