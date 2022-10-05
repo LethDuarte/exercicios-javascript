@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Igualdades</h1>
+    <p> Insira três números. </p>
+
+    <p>
+        <label for="inum1">Insira o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira o segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+
+        <label for="inum3">Insira o terceiro número:</label>
+        <input type="number" name="num3" id="inum3">
+    </p>
+
+    <p>
+        <input type="button" value="Checar" onclick="checar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function checar(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var inum3 = document.getElementById('inum3');
+            var num3 = Number(inum3.value);
+            
+            if (num1 == num2 && num2 == num3){
+                retorno.innerHTML = 30;
+            } else if (num1 == num2 || num1 == num3 || num2 == num3){
+                retorno.innerHTML = 40;
+            } else {
+                retorno.innerHTML = 20;
+            }
+        }
+    </script>
+    
+</body>
+</html>

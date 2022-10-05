@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Conferindo o último dígito.</h1>
+    <p> Insira três números positivos e inteiros e confira se seus últimos dígitos são iguais. </p>
+
+    <p>
+        <label for="inum1">Insira o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira o segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+
+        <label for="inum3">Insira o terceiro número:</label>
+        <input type="number" name="num3" id="inum3">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var inum3 = document.getElementById('inum3');
+            var num3 = Number(inum3.value);
+            
+            if (Number.isInteger(num1) && Number.isInteger(num2) && Number.isInteger(num3)){
+                if (num1>=0 && num2>=0 && num3>=0){
+                    if(num1%10 == num2%10 && num1%10 == num3%10){
+                        retorno.innerHTML = "Todos tem o mesmo número de dígitos a direita.";
+                    } else if(num1%10 == num2%10 || num1%10 == num3%10 || num2%10 == num3%10){
+                        retorno.innerHTML = "Dois deles tem o mesmo número de dígitos a direita.";
+                    }
+                }
+            } else {
+                window.alert('Insira um número válido.')
+            }
+        }
+    </script>
+    
+</body>
+</html>

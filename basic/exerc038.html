@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Estudante de Grau A+</h1>
+    <p> Digite sua nota (entre 0 e 100) e descobra se você é um estudante de grau A+. </p>
+
+    <p>
+        <label for="inota">Insira sua nota: </label>
+        <input type="number" name="nota" id="inota">
+    </p>
+
+    <p>
+        <input type="button" value="Grau" onclick="grau()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function grau(){
+            var retorno = document.getElementById('retorno');
+            var inota = document.getElementById('inota');
+            var nota = Number(inota.value);
+
+            if(nota>=90 && nota<=100){
+                retorno.innerHTML = "Parabéns! Você é um estudante grau A+!"
+            } else {
+                retorno.innerHTML = "Desculpe, infelizmente você não é um estudante grau A+!"
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

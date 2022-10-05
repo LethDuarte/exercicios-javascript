@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Procurando o 8</h1>
+    <p> Insira dois números. </p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            var soma = num1 + num2;
+            var dif = num1 - num2;
+            
+            if (num1 == 8 || num2 == 8){
+                retorno.innerHTML = "Um dos números fornecidos é igual a oito!"
+            } else if (soma == 8){
+                retorno.innerHTML = "A soma absoluta entre os números fornecidos pe igual a 8!"
+            } else if (Math.abs(dif) == 8){
+                retorno.innerHTML = "A diferença absoluta entre os números fornecidos é igual a 8!"
+            } else {
+                retorno.innerHTML = "Não encontramos nenhuma relação com 8."
+            }
+        }
+    </script>
+    
+</body>
+</html>
