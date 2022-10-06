@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Múltiplos de 7 e 11</h1>
+    <p> Insira dois números inteiros não negativos e verifique se eles são múltiplos de 7 ou 11. </p>
+
+    <p>
+        <label for="inum1">Insira o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+        <br>
+        <label for="inum2">Insira o segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum1 = document.getElementById('inum1');
+            var num1 = Number(inum1.value);
+            var inum2 = document.getElementById('inum2');
+            var num2 = Number(inum2.value);
+            
+            if (num1>0 && num2>0){
+                if(num1%7 == 0 || num1%11 == 0){
+                    retorno.innerHTML = `O número ${num1} é divisível por 7 ou por 11.`;
+                } else if (num2%7 == 0 || num2%11 == 0){
+                    retorno.innerHTML = `O número ${num2} é divisível por 7 ou por 11.`;
+                } else {
+                    retorno.innerHTML = `Nenhum dos números é divisível por 7 ou por 11.`;
+                }
+            } else {
+                retorno.innerHTML = `Insira números positivos.`;
+            }
+        }
+    </script>
+    
+</body>
+</html>

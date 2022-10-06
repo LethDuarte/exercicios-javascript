@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Intervalo</h1>
+    <p> Insira um número e confira se ele está presente no intervalo. </p>
+
+    <p>
+        <label for="inum">Insira o primeiro número: </label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Conferir" onclick="conferir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function conferir(){
+            var retorno = document.getElementById('retorno');
+            var inum = document.getElementById('inum');
+            var num = Number(inum.value);
+            
+            if(num>40 && num<1000){
+                retorno.innerHTML = "Sim, o número está presente no intervalo."
+            } else {
+                retorno.innerHTML = "Não, o número não está presente no intevalo."
+            }
+        }
+    </script>
+    
+</body>
+</html>
