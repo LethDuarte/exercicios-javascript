@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Substituindo</h1>
+
+    <p>
+        <label for="ipal">Insira uma palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Substituir" onclick="substituir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function substituir(){
+            var retorno = document.getElementById('retorno');
+            var ipal = document.getElementById('ipal');
+            var pal = ipal.value;
+            
+            var alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'w', 'y', 'z'];
+            var palavra = pal.split('');
+
+            for (i = 0; i<palavra.length; i++){
+                palavra[i] = alfabeto[alfabeto.indexOf(palavra[i])+1];
+            }
+            
+            retorno.innerHTML = palavra.join('').toUpperCase();
+        }
+    </script>
+    
+</body>
+</html>

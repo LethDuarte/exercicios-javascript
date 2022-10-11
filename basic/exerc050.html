@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Em Letras Maiúsculas </h1>
+    <p>Insira uma frase. Clique para que cada palavra seja iniciada em letra maiúscula.</p>
+
+    <p>
+        <label for="ipal">Insira a frase: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="UpperCase" onclick="upper()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function upper(){
+            var retorno = document.getElementById('retorno');
+            var ipal = document.getElementById('ipal');
+            var pal = ipal.value;
+            
+            var frase = pal.split(' ');
+
+            for (i = 0; i<frase.length; i++){
+                if(frase[i][0].toUpperCase() == frase[i][0]){
+                    retorno.innerHTML = frase.join(' ');
+                } else {
+                    frase[i] = frase[i][0].toUpperCase() + frase[i].substr(1);
+                    retorno.innerHTML = frase.join(' ');
+                }   
+            }
+        }
+    </script>
+    
+</body>
+</html>

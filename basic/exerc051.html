@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Convertendo números em horas</h1>
+    <p> Insira um número e vamos converte-lo em horas e minutos. </p>
+
+    <p>
+        <label for="inum">Insira um número: </label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Converter" onclick="converter()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function converter(){
+            var retorno = document.getElementById('retorno');
+            var inum = document.getElementById('inum');
+            var num = Number(inum.value);
+            
+            if (num<=60){
+                retorno.innerHTML = `${num} minutos.`
+            } else {
+                var hora = parseInt(num/60);
+                var min = num%60;
+
+                retorno.innerHTML = `${hora} horas e ${min} minutos.`
+            }
+        }
+    </script>
+    
+</body>
+</html>
