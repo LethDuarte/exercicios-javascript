@@ -141,5 +141,15 @@ function conferir(x, y, z){
         return false
     }
     }
+  
+    function contar(palavra){
+        var num = 0;
 
-console.log(conferir(2252, 52, 322))
+        if(i=0, i<=palavra.length(), i++){
+            if(palavra[i] == "a" || palavra[i] == "e" || palavra[i] == "i" || palavra[i] == "o" || palavra[i] == "u"){
+                num ++;
+            }
+        }
+    }
+
+console.log(contar("amor"))

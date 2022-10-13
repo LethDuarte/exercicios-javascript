@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Conferindo Posição </h1>
+    <p>Insira uma palavra e verifique se determinados caracteres estão separados extamente por três posições ao menos uma vez.</p>
+
+    <p>
+        <label for="ipal">Insira a palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <label for="icaract1">Insira o primeiro caractere: </label>
+        <input type="text" name="caract1" id="icaract1">
+    </p>
+
+    <p>
+        <label for="icaract2">Insira o segundo caractere: </label>
+        <input type="text" name="caract2" id="icaract2">
+    </p>
+
+    <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function verificar(){
+            var retorno = document.getElementById('retorno');
+            var palavra = document.getElementById('ipal').value;
+            var caract1 = document.getElementById('icaract1').value;
+            var caract2 = document.getElementById('icaract2').value;
+            
+            var ind1 = palavra.indexOf(caract1);
+            var ind2 = palavra.indexOf(caract2);
+
+            if(Math.abs(ind1 - ind2) == 3){
+                retorno.innerHTML = `Os carateres ${caract1} e ${caract2} estão separados por 3 caracteres na palavra ${palavra}. `
+            } else {
+                retorno.innerHTML = `Os carateres ${caract1} e ${caract2} não estão separados por 3 caracteres na palavra ${palavra}. `
+            }
+            // retorno.innerHTML = `${palavra}, ${caract1}, ${caract2}, ${ind1} `
+        }
+    </script>
+    
+</body>
+</html>

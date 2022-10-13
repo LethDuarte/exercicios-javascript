@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Ordenando </h1>
+    <p>Insira uma palavra e colocaremos todas as suas letras em ordem alfabética.</p>
+
+    <p>
+        <label for="ipal">Insira a palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Ordenando" onclick="ordenar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function ordenar(){
+            var retorno = document.getElementById('retorno');
+            var ipal = document.getElementById('ipal');
+            var palavra = ipal.value;
+            var palavrafinal = palavra.split("");
+            
+            var ordenada = palavrafinal.sort();
+
+            retorno.innerHTML = ordenada.join("");
+        }
+    </script>
+    
+</body>
+</html>
