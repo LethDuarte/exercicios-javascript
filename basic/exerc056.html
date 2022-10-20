@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Divindo corretamente </h1>
+    <p> Insira dois números e vamos dividi-los. </p>
+
+    <p>
+        <label for="inum1">Insira um número: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+
+    <p>
+        <label for="inum2">Insira outro número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Dividindo" onclick="dividir()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function dividir(){
+            var retorno = document.getElementById('retorno');
+            var num1 = Number(document.getElementById('inum1').value);
+            var num2 = Number(document.getElementById('inum2').value);
+            var resultado = (num1 / num2).toString();
+
+            if(resultado.includes(".")){
+                var convert = resultado.replace(".", ",");
+                retorno.innerHTML = convert;
+            } else {
+                retorno.innerHTML = resultado;
+            }          
+        }
+    </script>
+    
+</body>
+</html>

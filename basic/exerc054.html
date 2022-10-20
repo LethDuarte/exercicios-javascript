@@ -30,13 +30,13 @@
             var palavra = document.getElementById('ipal').value;
             var num = 0;
 
-            // if(i=0, i<=palavra.length, i++){
-            //     if(palavra[i] == "a" || palavra[i] == "e" || palavra[i] == "i" || palavra[i] == "o" || palavra[i] == "u"){
-            //         num ++;
-            //     }
-            // }
+            for(var i=0; i<=palavra.length; i++){
+                if(palavra[i] == "a" || palavra[i] == "e" || palavra[i] == "i" || palavra[i] == "o" || palavra[i] == "u"){
+                    num ++;
+                }
+            }
             
-            retorno.innerHTML = palavra[0]; length
+            retorno.innerHTML = num; 
         }
     </script>
     

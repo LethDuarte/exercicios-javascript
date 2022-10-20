@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1>Contando a letra 't' e a letra 'p' </h1>
+    <p>Insira uma frase e contaremos as letras 't' e 'p' para você.</p>
+
+    <p>
+        <label for="ipal">Insira a frase: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Contar" onclick="contar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function contar(){
+            var retorno = document.getElementById('retorno');
+            var palavra = document.getElementById('ipal').value;
+            var p = 0;
+            var t = 0;
+
+            for(var i=0; i<=palavra.length; i++){
+                if(palavra[i] == "p"){
+                    p ++;
+                } else if(palavra[i] == "t"){
+                    t ++;
+                }
+            }
+
+            if (p == 0 && t == 0){
+                retorno.innerHTML = `Não há letras 'p' ou 't' nesta frase.`
+            } else if(p == t){
+                retorno.innerHTML = `O número de letras 't' e de letras 'p' são iguais.`
+            } else if(p > t){
+                retorno.innerHTML = `O número de letras 'p' é maior do que o de letras 't'.`
+            }  else {
+                retorno.innerHTML = `O número de letras 't' é maior do que de o de letras 'p'.`
+            }
+            
+             
+        }
+    </script>
+    
+</body>
+</html>
