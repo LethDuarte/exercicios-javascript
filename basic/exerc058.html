@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Criando uma nova palavra </h1>
+    <p> Insira uma palavra e criaremos uma nova. </p>
+
+    <p>
+        <label for="ipal"> Palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Criar" onclick="criar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function criar(){
+            var retorno = document.getElementById('retorno');
+            var pal = document.getElementById('ipal').value;
+
+            if(pal.length < 3){
+                retorno.innerHTML = 'Insira uma palavra maior.'
+            } else {
+                var newpal = pal.substring(pal.length-3, pal.length)
+                for(var i=1; i<=4; i++){
+                    retorno.innerHTML += newpal;
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
