@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Vericação </h1>
+    <p> Insira uma palavra e verificaremos se há 'script' nela. </p>
+
+    <p>
+        <label for="ipal"> Palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function verificar(){
+            var retorno = document.getElementById('retorno');
+            var pal = document.getElementById('ipal').value;
+
+            if(pal.length > 6){
+                if(pal.includes('script') || pal.includes('Script') || pal.includes('SCRIPT')){
+                    retorno.innerHTML = "Há a sequência 'script' na palavra informada.";
+                } else {
+                    retorno.innerHTML = "Não há a sequência 'script' na palavra informada.";
+                }
+            } else {
+                retorno.innerHTML = "Insira uma palavra válida.";
+            }
+            
+        }
+    </script>
+</body>
+</html>

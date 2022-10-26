@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Descubra a cidade! </h1>
+    <p> Insira o nome de uma cidade e verificaremos se ela está na lista. </p>
+
+    <p>
+        <label for="ipal"> Cidade: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <p id="retorno">
+        
+    </p>
+
+    <script>
+        
+        function verificar(){
+            var retorno = document.getElementById('retorno');
+            var pal = document.getElementById('ipal').value;
+            
+            if(pal.slice(0, 3) == 'New' || pal.slice(0, 3) == 'new' || pal.slice(0,3) == 'NEW'){
+                retorno.innerHTML = "Sua cidade é New York!"
+            } else if (pal.slice(0, 3) == 'Los' || pal.slice(0,3) == 'los' || pal.slice(0,3) == 'LOS'){
+                retorno.innerHTML = "Sua cidade é Los Angeles!"
+            } else {
+                retorno.innerHTML = "Sua cidade não está na lista!"
+            }
+        }
+    </script>
+</body>
+</html>
