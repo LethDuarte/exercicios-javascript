@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Somando os dígitos </h1>
+    <p> Insira um número com dois ou mais dígitos e forneceremos o somatória entre eles. </p>
+
+    <p>
+        <label for="inum"> Insira  o número: </label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Somar" onclick="somarDigito()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function somarDigito(){
+            const retorno = document.getElementById('retorno');
+            var num = document.getElementById('inum').value;
+
+            var a = num.split('');
+            var b = [];
+
+            for(var i = 0; i< a.length; i++){
+                b.push(Number(a[i]));
+            }
+
+            var soma = 0;
+            for(var j=0; j<b.length; j++){
+                soma += b[j];
+            }
+
+            retorno.innerHTML = soma;
+        }
+
+    </script>
+    
+</body>
+</html>
