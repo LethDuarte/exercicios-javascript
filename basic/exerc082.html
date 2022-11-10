@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Somando os dígitos </h1>
+    <p> Insira dois números e somaremos os seus dígitos. </p>
+
+    <p>
+        <label for="inum"> Insira o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+
+    <p>
+        <label for="inum"> Insira o segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <input type="button" value="Somar" onclick="somarDigito()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function somarDigito(){
+            const retorno = document.getElementById('retorno');
+            var num1 = document.getElementById('inum1').value;
+            var num2 = document.getElementById('inum2').value;
+
+            var a = num1.split('');
+            var b = [];
+
+            for(var i = 0; i< a.length; i++){
+                b.push(Number(a[i]));
+            }
+
+            var c = num2.split('');
+            var d = [];
+            for(var l=0; l< c.length; l++){
+                d.push(Number(c[l]));
+            }
+
+            var s = [];
+            for(var j=0; j<b.length; j++){
+                s.push(b[j]+d[j]);
+            }
+
+            for(var m=0; m<s.length; m++){
+                if(s[m]>10){
+                    s[m] = s[m]%10;
+                    retorno.innerHTML = s.join('');
+                }
+            }
+
+            // retorno.innerHTML = b + " "+ d + " " + s.join('');
+            
+        }
+
+    </script>
+    
+</body>
+</html>
