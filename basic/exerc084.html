@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Substituindo as letras </h1>
+
+    <p>
+        <label for="ipal"> Insira uma palavra: </label>
+        <input type="text" name="pal" id="ipal">
+    </p>
+
+    <p>
+        <input type="button" value="Substituir" onclick="substituir()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function substituir(){
+            const alf = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z'];
+            const retorno = document.getElementById('retorno');
+            var pal = document.getElementById('ipal').value;
+            
+
+            for(var i=0; i<pal.length; i++){
+                if(pal[i] != 'z'){
+                    retorno.innerHTML += alf[alf.indexOf(pal[i])+1];
+                } else {
+                    retorno.innerHTML += alf[0];
+                }
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
+<!-- Escreva um JavaScript para substituir cada caractere de uma determinada string pelo próximo no alfabeto inglês. -->

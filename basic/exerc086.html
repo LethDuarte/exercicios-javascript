@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Tipos de Angulos </h1>
+    <p> Insira o valor do ângulo e informaremos o seu tipo.</p>
+
+    <p>
+        <label for="inum"> Insira o valor do ângulo em graus (°): </label>
+        <input type="number" name="num" id="inum">
+    </p>
+
+    <p>
+        <input type="button" value="Descobrir" onclick="tipoAngulo()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function tipoAngulo(){
+            const retorno = document.getElementById('retorno');
+            var num = Number(document.getElementById('inum').value);
+            
+            if(0 < num && num < 90){
+                retorno.innerHTML = 'Ângulo agudo.';
+            } else if(num === 90){
+                retorno.innerHTML = 'Ângulo reto.';
+            } else if(90 < num && num < 180){
+                retorno.innerHTML = 'Ângulo obtuso.';
+            } else if(num === 180){
+                retorno.innerHTML = 'Ângulo raso.';
+            } else {
+                retorno.innerHTML = 'Valor acima do relacionado.'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+<!-- Escreva um programa JavaScript para encontrar os tipos de um determinado ângulo. -->
