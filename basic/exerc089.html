@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Descobrindo o operador </h1>
+    <p> Insira dois operandos e o resultado, e informaremos o operador. Siga este modelo: X $ Y = Z. </p>
+
+    <p>
+        <label for="inum1"> X: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+
+    <p>
+        <label for="inum2"> Y: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <label for="inum3"> Z: </label>
+        <input type="number" name="num3" id="inum3">
+    </p>
+
+    <p>
+        <input type="button" value="Descobrir operando" onclick="descobrir()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function descobrir(){
+            const retorno = document.getElementById('retorno');
+            var num1 = Number(document.getElementById('inum1').value);
+            var num2 = Number(document.getElementById('inum2').value);
+            var num3 = Number(document.getElementById('inum3').value);
+
+            if(num3 === num1 + num2){
+                retorno.innerHTML = `${num1} + ${num2} = ${num3}.`;
+            } else if(num3 === num1 - num2){
+                retorno.innerHTML = `${num1} - ${num2} = ${num3}.`;
+            } else if (num3 === num1*num2){
+                retorno.innerHTML = `${num1} * ${num2} = ${num3}.`;
+            } else if(num3 === num1/num2){
+                retorno.innerHTML = `${num1} / ${num2} = ${num3}.`;
+            } else {
+                retorno.innerHTML = 'Nenhum operador se encaixa na definição.';
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+<!-- Escreva um programa JavaScript para verificar se é possível substituir $ em uma determinada expressão x $ y = z por um dos quatro sinais +, -, * ou / para obter uma expressão correta. -->

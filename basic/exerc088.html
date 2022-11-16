@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <h1> Inteiros semelhantes </h1>
+    <p> Insira dois números e um divisor. Informaremos se os números são semelhantes.</p>
+
+    <p>
+        <label for="inum1"> Insira o primeiro número: </label>
+        <input type="number" name="num1" id="inum1">
+    </p>
+
+    <p>
+        <label for="inum2"> Insira o segundo número: </label>
+        <input type="number" name="num2" id="inum2">
+    </p>
+
+    <p>
+        <label for="idiv"> Insira o divisor: </label>
+        <input type="number" name="div" id="idiv">
+    </p>
+
+    <p>
+        <input type="button" value="Semelhança" onclick="semelhante()">
+    </p>
+
+    <p id="retorno">
+
+    </p>
+
+    <script>
+        function semelhante(){
+            const retorno = document.getElementById('retorno');
+            var num1 = Number(document.getElementById('inum1').value);
+            var num2 = Number(document.getElementById('inum2').value);
+            var div = Number(document.getElementById('idiv').value);
+            
+            if(num1%div === 0 && num2%div === 0){
+                retorno.innerHTML = 'Esses números são semelhantes.';
+            } else if (num1%div !== 0 && num2%div !== 0){
+                retorno.innerHTML = 'Esses números são semelhantes.';
+            } else {
+                retorno.innerHTML = 'Esses números não são semelhantes.';
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
+<!-- Escreva um programa JavaScript que receba dois inteiros e um divisor. Se o divisor dado divide ambos os inteiros e não divide nenhum deles, então dois inteiros dados são semelhantes. Verifique se dois inteiros dados são semelhantes ou não. -->
